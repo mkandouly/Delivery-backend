@@ -235,6 +235,7 @@ app.get("/order-history/:id", isLoggedIn, async (req, res) => {
   res.status(200).json({ history: result.rows });
 });
 
-app.listen(process.env.PORT, () =>
+app.listen(process.env.PORT, "0.0.0.0",() =>
   console.log(`Server running on port ${process.env.PORT}`),
 );
+
